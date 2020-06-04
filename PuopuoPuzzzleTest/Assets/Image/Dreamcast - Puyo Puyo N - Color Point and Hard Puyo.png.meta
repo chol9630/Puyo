@@ -1,0 +1,1369 @@
+fileFormatVersion: 2
+guid: 30840713f883cd94fb50a44b369d846c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1084500610648050675
+    second: Red
+  - first:
+      213: 5724176144027121408
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_1
+  - first:
+      213: -5004630437161122433
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_2
+  - first:
+      213: -3742371462414020176
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_3
+  - first:
+      213: -1922809554194946952
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_4
+  - first:
+      213: -7925632039108245608
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_5
+  - first:
+      213: 608901106066833473
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_6
+  - first:
+      213: -7111153497842198006
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_7
+  - first:
+      213: 3279934031386282050
+    second: Blue
+  - first:
+      213: 6716357640101520075
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_9
+  - first:
+      213: -1581845662491416437
+    second: Green
+  - first:
+      213: -3372248366948714385
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_11
+  - first:
+      213: 3978395095900131482
+    second: Yellow
+  - first:
+      213: 3839512387963461739
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_13
+  - first:
+      213: -6429755509047993372
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_14
+  - first:
+      213: -7802900091233598611
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_15
+  - first:
+      213: -3389268197693456824
+    second: Yellow
+  - first:
+      213: -2905103184948789300
+    second: Puple
+  - first:
+      213: -3379362349754351034
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_18
+  - first:
+      213: -5896998207674805865
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_19
+  - first:
+      213: -407148128997000043
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_20
+  - first:
+      213: 1606615159545679347
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_21
+  - first:
+      213: -2532051757064478296
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_22
+  - first:
+      213: -1089551065817438589
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_23
+  - first:
+      213: 1365187543144977307
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_24
+  - first:
+      213: 6266281998086681405
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_25
+  - first:
+      213: -5266727045389985029
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_26
+  - first:
+      213: -3088649181118874897
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_27
+  - first:
+      213: 1085087863310414226
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_28
+  - first:
+      213: -4112858905441545395
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_29
+  - first:
+      213: -531724874923277548
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_30
+  - first:
+      213: 6153097377096669059
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_31
+  - first:
+      213: 1562798157663453934
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_32
+  - first:
+      213: -3979534693641373484
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_33
+  - first:
+      213: 8673129768728725550
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_34
+  - first:
+      213: -5109172089212639656
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_35
+  - first:
+      213: -636724003215382133
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_36
+  - first:
+      213: 821245223807100614
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_37
+  - first:
+      213: 2880242372645979789
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_38
+  - first:
+      213: -2080397237436984434
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_39
+  - first:
+      213: -2963048176337147792
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_40
+  - first:
+      213: 7397319247611594800
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_41
+  - first:
+      213: -3450364737325577071
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_42
+  - first:
+      213: 7408353494660113773
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_43
+  - first:
+      213: -8393334069067653195
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_44
+  - first:
+      213: -1118239443084722524
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_45
+  - first:
+      213: 7000393587995428822
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_46
+  - first:
+      213: -3090250854069647616
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_47
+  - first:
+      213: -3861821940698587411
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_48
+  - first:
+      213: 3298641836526990589
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_49
+  - first:
+      213: -7613155718673520815
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_50
+  - first:
+      213: 6196179108437975039
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_51
+  - first:
+      213: 8405734523047826359
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_52
+  - first:
+      213: -2905948539999556415
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_53
+  - first:
+      213: -12784706602072920
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_54
+  - first:
+      213: -2411533615648166010
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_55
+  - first:
+      213: -4347808893104462487
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_56
+  - first:
+      213: 8695629545735062643
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_57
+  - first:
+      213: -2766926740703892943
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_58
+  - first:
+      213: 889649716626182140
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_59
+  - first:
+      213: -4094482593668649320
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_60
+  - first:
+      213: -333529100587684449
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_61
+  - first:
+      213: 6206858612259938540
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_62
+  - first:
+      213: 4022400322290192599
+    second: Green
+  - first:
+      213: 2060051723861877424
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_63
+  - first:
+      213: -1084500610648050675
+    second: Red
+  - first:
+      213: 3279934031386282050
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_8
+  - first:
+      213: -3389268197693456824
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_16
+  - first:
+      213: -2905103184948789300
+    second: Blue
+  - first:
+      213: 919433260191158986
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_64
+  - first:
+      213: 1999565871335387670
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_65
+  - first:
+      213: 7770228390249649336
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_66
+  - first:
+      213: 839788231029652608
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_67
+  - first:
+      213: 5623680110160071895
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_68
+  - first:
+      213: -4511398465274061902
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_69
+  - first:
+      213: 3580581326069331897
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_70
+  - first:
+      213: -7398526817047197025
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_71
+  - first:
+      213: 9114929244774163948
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_72
+  - first:
+      213: -1891402458924743332
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_73
+  - first:
+      213: 5447379146839486109
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_74
+  - first:
+      213: -1748557924380586879
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_75
+  - first:
+      213: -3111684457818576540
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_76
+  - first:
+      213: 8640033456943780567
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_77
+  - first:
+      213: 3542157979003653788
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_78
+  - first:
+      213: 2736994817451067225
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_79
+  - first:
+      213: 4250801428245316125
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_80
+  - first:
+      213: 6316366232540414686
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_81
+  - first:
+      213: 1582771749622955016
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_82
+  - first:
+      213: 781806952183662889
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_83
+  - first:
+      213: 5330645644065914391
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_84
+  - first:
+      213: 4624116089016565837
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_85
+  - first:
+      213: -5137985179433451273
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_86
+  - first:
+      213: 7431904180517352875
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_87
+  - first:
+      213: -5670244209997681797
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_88
+  - first:
+      213: -35743757966375669
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_89
+  - first:
+      213: -6535790520806212450
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_90
+  - first:
+      213: -5667746510251059466
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_91
+  - first:
+      213: 4593976593319541651
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_92
+  - first:
+      213: 6997332778158707844
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_93
+  - first:
+      213: -851217077224696237
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_94
+  - first:
+      213: 4717870384896023423
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_95
+  - first:
+      213: 5690601720770358763
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_96
+  - first:
+      213: 2308349796852095820
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_97
+  - first:
+      213: 1088585497995464788
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_98
+  - first:
+      213: 8464443666438389943
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_99
+  - first:
+      213: 4579864022835047063
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_100
+  - first:
+      213: 1971110314884998871
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_101
+  - first:
+      213: 8947419946757058781
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_102
+  - first:
+      213: 8837881292433457888
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_103
+  - first:
+      213: 6620138515515664942
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_104
+  - first:
+      213: -2958387414233540578
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_105
+  - first:
+      213: 7903259581543402102
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_106
+  - first:
+      213: 7849876132963070894
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_107
+  - first:
+      213: -3015430057362672771
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_108
+  - first:
+      213: 5366812860896794120
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_109
+  - first:
+      213: 581093585765710291
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_110
+  - first:
+      213: -7116208445790012539
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_111
+  - first:
+      213: -315331289294958584
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_112
+  - first:
+      213: -2255753079042074504
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_113
+  - first:
+      213: -5348620275853281710
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_114
+  - first:
+      213: -6586285757129337459
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_115
+  - first:
+      213: -3911605642117378693
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_116
+  - first:
+      213: 6502207048648943890
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_117
+  - first:
+      213: 2307433332786357419
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_118
+  - first:
+      213: 8427272909424274112
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_119
+  - first:
+      213: -3053379279156379985
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_120
+  - first:
+      213: -7519509882223965676
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_121
+  - first:
+      213: -4784956803973280223
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_122
+  - first:
+      213: -3313118156396368951
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_123
+  - first:
+      213: 8546240177898904092
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_124
+  - first:
+      213: -9102600769877788414
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_125
+  - first:
+      213: 6948090150276034443
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_126
+  - first:
+      213: -8763997614942627574
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_127
+  - first:
+      213: 6482985354859621533
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_128
+  - first:
+      213: -1638199526835319779
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_129
+  - first:
+      213: 2415501365034544676
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_130
+  - first:
+      213: -946351902986416385
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_131
+  - first:
+      213: -7546688912739710209
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_132
+  - first:
+      213: -5303286870657867221
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_133
+  - first:
+      213: -206330668507627522
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_134
+  - first:
+      213: -217934207261319792
+    second: RedEffect
+  - first:
+      213: -1084500610648050675
+    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_0
+  - first:
+      213: -7451804384907121914
+    second: GreenEffect
+  - first:
+      213: 4803303082130821268
+    second: BlueEffect
+  - first:
+      213: 7932707597631549162
+    second: YellowEffect
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Red
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 480
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d5e5f3269d6ab4eb0f2080a5e5e799
+      internalID: -1084500610648050675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 447
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea70d375a66b5c449ad0988d88bb1066
+      internalID: -1581845662491416437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 385
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0651f36d0d53fbd41b862ca44446e6ea
+      internalID: 3978395095900131482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 418
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59c073d64bddc2478a49e30046932fc
+      internalID: -2905103184948789300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_49
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 257
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defe5d96fbf03c341a9b0cf39f6d6927
+      internalID: 3298641836526990589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_50
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 256
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89a750af3a98bd648b0a1c8572e4c7f2
+      internalID: -7613155718673520815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_60
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 250
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c961ee0fec3308e44ba7f55b0d1058c3
+      internalID: -4094482593668649320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_61
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 250
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e37ca97335014f46878c47aa4eb429c
+      internalID: -333529100587684449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_64
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 243
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d5c3bc3d7b0264eb960ecb97b0f37f
+      internalID: 919433260191158986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_65
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 232
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2bd7bcf5bd83e46b51acb6f7d51e59
+      internalID: 1999565871335387670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_69
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 160
+        width: 30
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10df443f744365343a4a83a66d3d7c89
+      internalID: -4511398465274061902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_71
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 218
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d120a45124720e47bfead011147bcf9
+      internalID: -7398526817047197025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_72
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 218
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f7d7d0d53ef9642a9762d5e70892e7
+      internalID: 9114929244774163948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_74
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 186
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4517e5247cfe841ae34cd6bf60a3e6
+      internalID: 5447379146839486109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_75
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 186
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e0b32d18b1b92458c109112d66e210
+      internalID: -1748557924380586879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_76
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 160
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234902fec2dd7bd42bf43118c65aeff1
+      internalID: -3111684457818576540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_77
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 154
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bb7ae3e73d8724685c0754c46e6b9e
+      internalID: 8640033456943780567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_78
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 154
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3cff4c6668c0d04e8eedd55d7e75992
+      internalID: 3542157979003653788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_88
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 128
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93e5a488b6b075448111790b1ee5621
+      internalID: -5670244209997681797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_89
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 128
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4bc9d2af95d22478909b4b13be9dc9
+      internalID: -35743757966375669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_92
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 146
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c121474d611c9c845955cd18eb0d5192
+      internalID: 4593976593319541651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_93
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 146
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdcf88f90618024f8a92a3ed950af54
+      internalID: 6997332778158707844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_96
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 136
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe346ac5515db540b7b3fe0a8b3da5c
+      internalID: 5690601720770358763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_97
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 136
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5968c260a7c4345b8be542c9b5999b
+      internalID: 2308349796852095820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_100
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 122
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12c95228e698b94b9b5b3e69b240f6f
+      internalID: 4579864022835047063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_101
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 122
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75fb0e0bf98c5142bd3e5d88223882a
+      internalID: 1971110314884998871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_103
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 114
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92da6876c6bf9e459ca80211f6556ae
+      internalID: 8837881292433457888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_104
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 104
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b75c3fdef4215b45b6b7f881fe52e69
+      internalID: 6620138515515664942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_105
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 96
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feafa6b84728e58499a433a975479fd7
+      internalID: -2958387414233540578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_106
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 96
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ade912a616e1e4685109490d26f850
+      internalID: 7903259581543402102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_120
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 48
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a34ce5e9e2fdb4987eaa4ee6b0ddfb
+      internalID: -3053379279156379985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_121
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 48
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4aa7495b8b5b944997b1dddc31ddb0f
+      internalID: -7519509882223965676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RedEffect
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6655e155b8a97849895ba56501beac2
+      internalID: -217934207261319792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_0
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5fb8def16a33a4d84e6dc1084da725
+      internalID: -1084500610648050675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenEffect
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c02ef75d0cb52e4ab0196ff41561299
+      internalID: -7451804384907121914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlueEffect
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f3cabb9eb6b7d47b3efd52261d83c4
+      internalID: 4803303082130821268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YellowEffect
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c68a78cb3fd1c4a8d670a618a469bc
+      internalID: 7932707597631549162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 148
+        width: 32
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6b457e40768c844869c9cb5fea94f0
+      internalID: 5724176144027121408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 153
+        width: 32
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa64a68d859b67940a584a7d601aeaf7
+      internalID: -5004630437161122433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
