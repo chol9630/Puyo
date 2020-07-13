@@ -19,7 +19,8 @@ public class MakeBlock : MonoBehaviour
 
     public AudioClip EndSound;
 
-
+    private Quaternion oldRot1; //뿌요 자식의 회전값1
+    private Quaternion oldRot2;//뿌요 자식의 회전값2
 
 
     public AudioClip OneCombo;
@@ -731,8 +732,11 @@ public class MakeBlock : MonoBehaviour
         Quaternion oldRot = pyou.transform.rotation;//회전이 안되면 다시 돌려보내주기위함
 
 
-        Quaternion oldRot1 = pyou.transform.GetChild(0).rotation;
-        Quaternion oldRot2 = pyou.transform.GetChild(1).rotation;
+        if (pyou.transform.childCount != 0)
+        {
+            oldRot1 = pyou.transform.GetChild(0).rotation;
+            oldRot2 = pyou.transform.GetChild(1).rotation;
+        }
         //if (pyou.transform.childCount != 0)
         //{
         //    Quaternion oldRot1 = pyou.transform.GetChild(0).rotation;
