@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraResolution
     - MakeBlock
     - MapSection
     - ObjectPool
@@ -15,6 +16,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -62,9 +64,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10660}
     - Class: 114
+      Script: {instanceID: 11040}
+    - Class: 114
       Script: {instanceID: 11136}
     - Class: 114
       Script: {instanceID: 11508}
+    - Class: 114
+      Script: {instanceID: 13540}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -116,6 +122,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11136}
     - Class: 114
       Script: {instanceID: 11508}
+    - Class: 114
+      Script: {instanceID: 13540}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -171,6 +179,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11184}
     - Class: 114
       Script: {instanceID: 11508}
+    - Class: 114
+      Script: {instanceID: 13540}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -364,7 +374,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ae3b24e34da1b53f9b11c680b3333a4c
+      Hash: 8c2742f8897995f059c00a5169ea3b83
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MakeBlock
@@ -638,9 +648,15 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraResolution
   platform: 13
   scenePathNames:
   - Assets/Scenes/Tile.unity
   - Assets/Scenes/MainGame.unity
   - Assets/Scenes/MapSeletion.unity
-  playerPath: "C:/Users/SAMSUNG/Desktop/\uD14C\uC2A4\uD2B8\uBFCC\uC694/TestPyou10.apk"
+  playerPath: "C:/Users/SAMSUNG/Desktop/\uD14C\uC2A4\uD2B8\uBFCC\uC694/TestPyou12.apk"

@@ -26,6 +26,15 @@ TextureImporter:
   - first:
       213: 2673217603157295063
     second: NextTile
+  - first:
+      213: -716445542542296265
+    second: ScorePanel
+  - first:
+      213: 7897983705842812085
+    second: Genesis 32X SCD - Puyo Puyo Tsu JPN - Boards_0
+  - first:
+      213: 7693223320096948736
+    second: Genesis 32X SCD - Puyo Puyo Tsu JPN - Boards_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -185,27 +194,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Genesis 32X SCD - Puyo Puyo Tsu JPN - Boards_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 1393
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4cb53a994afc7384b8929e16c0efbd18
-      internalID: -3097306012638964333
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Genesis 32X SCD - Puyo Puyo Tsu JPN - Boards_3
       rect:
         serializedVersion: 2
@@ -277,7 +265,7 @@ TextureImporter:
         width: 36
         height: 67
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,6 +273,27 @@ TextureImporter:
       bones: []
       spriteID: a3f5ce52f5ee07940b8b4ab42fce7a58
       internalID: 2673217603157295063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorePanel
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 1218
+        width: 68
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b309797ad6a5e48ad95cca028c6121
+      internalID: -716445542542296265
       vertices: []
       indices: 
       edges: []

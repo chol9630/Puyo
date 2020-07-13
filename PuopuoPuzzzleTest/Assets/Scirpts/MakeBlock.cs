@@ -10,7 +10,16 @@ public class StringInt : SerializableDictionary<int, string> { };
 
 public class MakeBlock : MonoBehaviour
 {
+
+    public Transform OptionButton;
+    private bool IsOption = false;
+     
+    public Text TScore; //스코어점수판
+    private int Score; //스코어점수
+
     public AudioClip EndSound;
+
+
 
 
     public AudioClip OneCombo;
@@ -145,6 +154,8 @@ public class MakeBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         AudioSource = GetComponent<AudioSource>();
 
         GameOverTime = 10f;
@@ -157,6 +168,9 @@ public class MakeBlock : MonoBehaviour
         GameOverTimeText = GameOverPanel.transform.Find("Time").GetComponent<Text>();
         GameOverText  = GameOverPanel.transform.Find("GameOver").GetComponent<Text>();
 
+        //Score = GetComponent<Text>();
+        TScore.text = "0";
+        Score = 0;
         MapSource  = MapTile.gameObject.GetComponentInChildren<AudioSource>();
         PuyoMoveSource = pyou.gameObject.GetComponentInChildren<AudioSource>();
 
@@ -212,59 +226,79 @@ public class MakeBlock : MonoBehaviour
         if (Combo == 1)
         {
             AudioSource.clip = OneCombo;
-
+           
+            TScore.text = Score.ToString();
             if (!AudioSource.isPlaying)
             {
+                Score += 10;
                 AudioSource.Play();
 
             }
         }
         else if (Combo == 2)
         {
+           
+            TScore.text = Score.ToString();
             AudioSource.clip = TwoCombo;
             if (!AudioSource.isPlaying)
             {
+                Score += 20;
                 AudioSource.Play();
             }
         }
         else if (Combo == 3)
         {
+            
+            TScore.text = Score.ToString();
             AudioSource.clip = threeCombo;
             if (!AudioSource.isPlaying)
             {
+                Score += 30;
                 AudioSource.Play();
             }
         }
 
         else if (Combo == 4)
         {
+          
+            TScore.text = Score.ToString();
             AudioSource.clip = FourCombo;
             if (!AudioSource.isPlaying)
             {
+                Score += 40;
                 AudioSource.Play();
             }
         }
         else if (Combo == 5)
         {
+           
+            TScore.text = Score.ToString();
             AudioSource.clip = FiveCombo;
             if (!AudioSource.isPlaying)
             {
+                Score += 50;
                 AudioSource.Play();
             }
         }
         else if (Combo == 6)
         {
+            
+            TScore.text = Score.ToString();
             AudioSource.clip = SixCombo;
             if (!AudioSource.isPlaying)
             {
+                Score += 60;
                 AudioSource.Play();
             }
         }
         else if(Combo >6)
         {
+          
+            TScore.text = Score.ToString();
             AudioSource.clip = SevenCombo;
             if (!AudioSource.isPlaying)
             {
+                Score += 100;
                 AudioSource.Play();
             }
         }
@@ -272,6 +306,28 @@ public class MakeBlock : MonoBehaviour
 
     }
 
+
+
+    public void Option()
+    {
+        if (IsOption == false)
+        {
+            IsOption = true;
+            Time.timeScale = 0f;
+            OptionButton.transform.GetChild(0).gameObject.SetActive(true);
+            OptionButton.transform.GetChild(1).gameObject.SetActive(true);
+        }
+        else
+        {
+            IsOption = false;
+            Time.timeScale = 1f;
+            OptionButton.transform.GetChild(0).gameObject.SetActive(false);
+            OptionButton.transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+    }
+
+    //오른쪽움직임
     public void MoveRight()
     {
         
@@ -287,6 +343,7 @@ public class MakeBlock : MonoBehaviour
         //moveDir = Vector3.zero;
        
     }
+    //왼쪽움직임
     public void MoveLeft()
     {
         isRotate = false;
@@ -299,6 +356,8 @@ public class MakeBlock : MonoBehaviour
         //moveDir = Vector3.zero;
       
     }
+
+    //밑으로 내리기
     public void MoveDown()
     {
         while (MovePyous(Vector3.down, false))
@@ -521,8 +580,11 @@ public class MakeBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //처음 시작이면
         if (IsStart == false)
         {
+            Time.timeScale = 1f;
             GameOverTime = 10f;
             CreatePyouPyou();
             NextPyouPyou();
@@ -532,7 +594,7 @@ public class MakeBlock : MonoBehaviour
         
        
 
-        
+        //맵선택한것 맵보이기
         MapSelection();
 
 
@@ -668,11 +730,30 @@ public class MakeBlock : MonoBehaviour
         Vector3 oldPos = pyou.transform.position; //회전이 안되면 다시 돌려보내주기위함
         Quaternion oldRot = pyou.transform.rotation;//회전이 안되면 다시 돌려보내주기위함
 
+
+        Quaternion oldRot1 = pyou.transform.GetChild(0).rotation;
+        Quaternion oldRot2 = pyou.transform.GetChild(1).rotation;
+        //if (pyou.transform.childCount != 0)
+        //{
+        //    Quaternion oldRot1 = pyou.transform.GetChild(0).rotation;
+        //    Quaternion oldRot2 = pyou.transform.GetChild(1).rotation;
+
+        //    if (!CanMoveTo(pyou))
+        //    {
+        //        pyou.transform.GetChild(0).rotation = oldRot1;
+        //        pyou.transform.GetChild(1).rotation = oldRot2;
+        //    }f
+        //}
         pyou.transform.position += moveDir;
 
         if (isRotate)
         {
-            pyou.transform.rotation *= Quaternion.Euler(0, 0, 90);
+
+
+                pyou.transform.rotation *= Quaternion.Euler(0, 0, 90);
+                pyou.transform.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
+                pyou.transform.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
+            
         }
 
 
@@ -681,6 +762,12 @@ public class MakeBlock : MonoBehaviour
         {
             pyou.transform.position = oldPos;
             pyou.transform.rotation = oldRot;
+            pyou.transform.GetChild(0).rotation = oldRot1;
+            pyou.transform.GetChild(1).rotation = oldRot2;
+
+
+
+
             Combo = 0;
             if ((int)moveDir.y == -1 && (int)moveDir.x == 0 && isRotate == false)
             {
