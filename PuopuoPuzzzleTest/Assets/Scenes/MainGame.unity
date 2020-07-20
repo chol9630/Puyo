@@ -296,6 +296,7 @@ MonoBehaviour:
   MapTile: {fileID: 434295804}
   Borad: {fileID: 1077591072}
   NextPyous: {fileID: 1806714101}
+  Ghostpyou: {fileID: 764666792}
   Xsize: 6
   Ysize: 10
   PrefabTile: {fileID: 4727722373427086476, guid: a7e31f209b50f144da56f46953ccfb67,
@@ -321,6 +322,7 @@ Transform:
   - {fileID: 1077591072}
   - {fileID: 1806714101}
   - {fileID: 1854187628}
+  - {fileID: 764666792}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1220,21 +1222,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listPool:
   - tag: Red
-    size: 20
+    size: 1
     PreFab: {fileID: 2050335588798638995, guid: fcf733f380d70134282a9d9de38467f0,
       type: 3}
   - tag: Blue
-    size: 20
+    size: 1
     PreFab: {fileID: 8018486964526590032, guid: f5bd59f4fffd7494a896a7e975da17d9,
       type: 3}
   - tag: Green
-    size: 20
+    size: 1
     PreFab: {fileID: 6907333500154569033, guid: 7d4491443f244f54daccdafc135b616e,
       type: 3}
   - tag: Yellow
-    size: 20
+    size: 1
     PreFab: {fileID: 5634161896511872817, guid: 382235c297ae34446b74b805c0e075c5,
       type: 3}
+  - tag: GhostYellow
+    size: 1
+    PreFab: {fileID: 7193579714882990004, guid: 7946f6894fb3f7f4fab5f73ac8aeb34b,
+      type: 3}
+  - tag: GhostBlue
+    size: 1
+    PreFab: {fileID: 8106256419098355855, guid: 8ecfe5fd34d4ef14c8fd50bfdf0b33e8,
+      type: 3}
+  - tag: GhostRed
+    size: 1
+    PreFab: {fileID: 8374876999926275682, guid: 94f8c73a8a49d264b835d2f0b0bd9758,
+      type: 3}
+  - tag: GhostGreen
+    size: 1
+    PreFab: {fileID: 411522501074128815, guid: 79932b36fdcd10b43bb3533b5efb3214, type: 3}
 --- !u!4 &647111859
 Transform:
   m_ObjectHideFlags: 0
@@ -1248,6 +1265,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &764666791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764666792}
+  m_Layer: 0
+  m_Name: GhostPyou
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &764666792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764666791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 110407212}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &788669211
 GameObject:

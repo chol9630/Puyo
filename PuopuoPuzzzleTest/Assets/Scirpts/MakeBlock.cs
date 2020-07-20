@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class StringInt : SerializableDictionary<int, string> { };
 
-
 public class MakeBlock : MonoBehaviour
 {
 
@@ -46,7 +45,9 @@ public class MakeBlock : MonoBehaviour
     public Transform pyou; //내려갈 뿌요
     public Transform MapTile; //맵그림
     public Transform Borad;   //맵에 맞춰서 뿌요 저장할 공간
-    public Transform NextPyous; 
+    public Transform NextPyous;
+
+    public Transform Ghostpyou;
 
 
     public int Xsize;
@@ -70,9 +71,8 @@ public class MakeBlock : MonoBehaviour
 
     private bool IsStart; //시작을 햇는지 체크
     private int rand; //랜덤값
-    private int NextPyou;
-    private bool Next = false;
-
+    private int NextPyou; //다음블럭 미리 생성
+  
     private int Combo = 0;//콤보
     private float ComboTime;
     private float NextTime = 2f;
@@ -80,8 +80,7 @@ public class MakeBlock : MonoBehaviour
    
     private bool isRotate;
     private Vector3 moveDir;
-    int MaxXR;
-    int MaxXL;
+  
 
     
 
@@ -91,8 +90,8 @@ public class MakeBlock : MonoBehaviour
     private StringInt YyYellow = new StringInt();
 
 
-    private StringInt YyUp = new StringInt();
-    private StringInt YyDown = new StringInt();
+    private StringInt YyUp = new StringInt(); //삭제할떄 위 블럭
+    private StringInt YyDown = new StringInt(); //삭제할떄 아래 블럭
 
     private bool isBroken = false; // 부셔진게있으면 true
 
@@ -188,7 +187,7 @@ public class MakeBlock : MonoBehaviour
             col.transform.position = new Vector3(0, i, 0);
             col.transform.parent = Borad;
         }
-
+        MapSelection();
     }
 
 
@@ -315,15 +314,15 @@ public class MakeBlock : MonoBehaviour
         {
             IsOption = true;
             Time.timeScale = 0f;
-            OptionButton.transform.GetChild(0).gameObject.SetActive(true);
-            OptionButton.transform.GetChild(1).gameObject.SetActive(true);
+            OptionButton.GetChild(0).gameObject.SetActive(true);
+            OptionButton.GetChild(1).gameObject.SetActive(true);
         }
         else
         {
             IsOption = false;
             Time.timeScale = 1f;
-            OptionButton.transform.GetChild(0).gameObject.SetActive(false);
-            OptionButton.transform.GetChild(1).gameObject.SetActive(false);
+            OptionButton.GetChild(0).gameObject.SetActive(false);
+            OptionButton.GetChild(1).gameObject.SetActive(false);
         }
 
     }
@@ -482,94 +481,128 @@ public class MakeBlock : MonoBehaviour
         if (IsStart == false)
         {
             rand = Random.Range(1, 17);
+            //rand = 1;
         }
         else
         {
             rand = NextPyou;
         }
         NextPyou = Random.Range(1, 17);
-       
-        
+        //NextPyou = 1;
+
+
         switch (rand)
         {
             case 1: //레드 레드 
                 ObjectPool.Instance.SpawnPool("Red", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Red", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostRed", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostRed", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 2://레드 블루 
                 ObjectPool.Instance.SpawnPool("Red", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostRed", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 3: //레드 그린
                 ObjectPool.Instance.SpawnPool("Red", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostRed", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 4: //레드 옐로우
                 ObjectPool.Instance.SpawnPool("Red", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostRed", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 5://블루 레드
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Red", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostRed", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 6://블루 블루
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 7://블루 그린
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 8://블루 옐로우
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 9: //그린 레드
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Red", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
-                IsStart = true;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostRed", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                IsStart = true;              
                 break;
             case 10: // 그린 블루
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 11: // 그린 그린
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent =Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 12: // 그린 옐로우
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 13: //옐로우 레드
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 14: // 옐로우 블루
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostBlue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 15: // 옐로우 그린
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
             case 16: // 옐로우 옐로우
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Yellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
+                ObjectPool.Instance.SpawnPool("GhostYellow", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
                 IsStart = true;
                 break;
 
@@ -582,6 +615,7 @@ public class MakeBlock : MonoBehaviour
     void Update()
     {
 
+        
         //처음 시작이면
         if (IsStart == false)
         {
@@ -596,7 +630,7 @@ public class MakeBlock : MonoBehaviour
        
 
         //맵선택한것 맵보이기
-        MapSelection();
+        
 
 
 
@@ -647,9 +681,9 @@ public class MakeBlock : MonoBehaviour
 
         else if (GameOver == false)
         {
-
             MovePyou();
-           
+        
+
             if (Combo > 0)
             {
                 
@@ -663,6 +697,9 @@ public class MakeBlock : MonoBehaviour
 
                 BrekenDown();
                 pyou.position = new Vector3(0.5f, 9f, 0f); //초기화 해줘야 다시 회전가능
+                pyou.rotation = Quaternion.identity;
+                Ghostpyou.position = new Vector3(0.5f, 9f, 0f); //초기화 해줘야 다시 회전가능
+                Ghostpyou.rotation = Quaternion.identity;
                 CreatePyouPyou();
                 NextPyouPyou();
               
@@ -681,18 +718,20 @@ public class MakeBlock : MonoBehaviour
         moveDir = Vector3.zero;
         bool isRotate = false;
 
-      
+        
 
 
 
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             moveDir.x = -1;
+           
 
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             moveDir.x = 1;
+          
         }
 
         else if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -702,6 +741,7 @@ public class MakeBlock : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             moveDir.y = -1;
+          
         }
 
         else if (Input.GetKeyDown(KeyCode.Space))
@@ -710,7 +750,7 @@ public class MakeBlock : MonoBehaviour
             {
             }
         }
-
+        
         if (ModenTime > DownTime)
         {
             ModenTime = 0f;
@@ -720,22 +760,38 @@ public class MakeBlock : MonoBehaviour
 
         if (moveDir != Vector3.zero || isRotate)
         {
+            
 
             MovePyous(moveDir, isRotate);
+            
+            
         }
 
+
     }
+    
+
+  
+
+     
 
     private bool MovePyous(Vector3 moveDir, bool isRotate)
     {
-        Vector3 oldPos = pyou.transform.position; //회전이 안되면 다시 돌려보내주기위함
-        Quaternion oldRot = pyou.transform.rotation;//회전이 안되면 다시 돌려보내주기위함
+        Vector3 oldPos = pyou.position; //회전이 안되면 다시 돌려보내주기위함
+        Quaternion oldRot = pyou.rotation;//회전이 안되면 다시 돌려보내주기위함
+
+        Vector3 GoldPos = Ghostpyou.position; //회전이 안되면 다시 돌려보내주기위함
+        Quaternion GoldRot = Ghostpyou.rotation;//회전이 안되면 다시 돌려보내주기위함
 
 
-        if (pyou.transform.childCount != 0)
+
+        if (pyou.childCount != 0)
         {
-            oldRot1 = pyou.transform.GetChild(0).rotation;
-            oldRot2 = pyou.transform.GetChild(1).rotation;
+            oldRot1 = pyou.GetChild(0).rotation;
+            oldRot2 = pyou.GetChild(1).rotation;
+
+
+
         }
         //if (pyou.transform.childCount != 0)
         //{
@@ -748,32 +804,83 @@ public class MakeBlock : MonoBehaviour
         //        pyou.transform.GetChild(1).rotation = oldRot2;
         //    }f
         //}
-        pyou.transform.position += moveDir;
-
-        if (isRotate)
+        pyou.position += moveDir;
+        if (!isRotate)
+        {
+            Ghostpyou.position = pyou.position;
+            for (int i = 0; i < Ghostpyou.childCount; i++)
+            {
+                Ghostpyou.GetChild(i).position = pyou.GetChild(i).position;
+            }
+        }
+        else
         {
 
 
-                pyou.transform.rotation *= Quaternion.Euler(0, 0, 90);
-                pyou.transform.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
-                pyou.transform.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
+            pyou.rotation *= Quaternion.Euler(0, 0, 90);
+            pyou.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
+            pyou.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
             
+            
+            Ghostpyou.rotation *= Quaternion.Euler(0, 0, 90);
+            Ghostpyou.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
+            Ghostpyou.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
+            Ghostpyou.position = pyou.position;
+            
+
+            if(pyou.rotation.eulerAngles == new Vector3(0, 0, 0) || pyou.rotation.eulerAngles == new Vector3(0, 0, 180))
+            {
+                for (int i = 0; i < Ghostpyou.childCount; i++)
+                {
+                    Ghostpyou.GetChild(i).position = pyou.GetChild(i).position;
+                }
+            }
+
+
         }
 
-
-
-        if (!CanMoveTo(pyou))
+        while(CanMoveTo(pyou) && GhostCanMove(Ghostpyou))  //둘다 움직일수있을떄 유령뿌요를 내려준다
         {
-            pyou.transform.position = oldPos;
-            pyou.transform.rotation = oldRot;
-            pyou.transform.GetChild(0).rotation = oldRot1;
-            pyou.transform.GetChild(1).rotation = oldRot2;
+            
+           Ghostpyou.position += Vector3.down;
+
+           if(Ghostpyou.position.y <-1) //무한루프 방지
+           {
+               break;
+           }           
 
 
+            
+        }
+        
+        //한칸을 더 내려줫을시 한칸올려준다.
+        if (Ghostpyou.position.y <0)
+        {
+            Ghostpyou.position += Vector3.up;
+        }
 
+        if (!CanMoveTo(Ghostpyou))
+        {
+            Ghostpyou.position = GoldPos;
+
+        }
+
+        if (!CanMoveTo(pyou))  
+        {
+
+            //만약 회전버튼을 누르고 회전을 햇으나 보드를 벗어난공간일수있으므로 다시 돌려준다
+            pyou.position = oldPos;
+            pyou.rotation = oldRot;
+            pyou.GetChild(0).rotation = oldRot1;
+            pyou.GetChild(1).rotation = oldRot2;
+
+            //Ghostpyou.position = oldPos;
+            Ghostpyou.rotation = oldRot;
+            Ghostpyou.GetChild(0).rotation = oldRot1;
+            Ghostpyou.GetChild(1).rotation = oldRot2;
 
             Combo = 0;
-            if ((int)moveDir.y == -1 && (int)moveDir.x == 0 && isRotate == false)
+            if ((int)moveDir.y == -1 && (int)moveDir.x == 0 && isRotate == false) //움직일수없으나 한칸내려줘야하면 보드에 넣어주거나 게임종료조건인지 확인
             {
 
                 if(!CanMoveTo(pyou))
@@ -798,6 +905,8 @@ public class MakeBlock : MonoBehaviour
                 if (GameOver == false)
                 {
                     AddToBoard(pyou);
+                    GhostPyouErase(Ghostpyou);
+
                     NextPyouFalse(NextPyous);
 
                 }
@@ -811,7 +920,7 @@ public class MakeBlock : MonoBehaviour
             return false;
         }
 
-        if (pyou.transform.position.y <-1)
+        if (pyou.position.y <-1)
         {
             return false;
         }
@@ -821,7 +930,174 @@ public class MakeBlock : MonoBehaviour
 
     }
 
+    bool GhostCanMove(Transform root)
+    {
+       
+        for (int i = 0; i < root.childCount; ++i)
+        {
+           
+            var node = root.GetChild(i);
+            int x = Mathf.RoundToInt(node.position.x + halfXsize + 0.5f);
+            int y = Mathf.RoundToInt(node.position.y + halfYsize - 5);
 
+
+            //좌우측 못가게
+            if (x < 1 || x > Xsize)
+            {
+                return false;
+            }
+            //바닥
+            if (y < 0)
+            {
+                if (pyou.rotation.eulerAngles == new Vector3(0, 0, 180))
+                {
+                    Ghostpyou.position += Vector3.up;
+                }
+
+
+                return false;
+            }
+
+
+            var column = Borad.Find(y.ToString());
+
+           
+           
+
+
+            if (column != null && column.Find(x.ToString()) != null)
+            {
+                //if (pyou.rotation.eulerAngles == new Vector3(0, 0, 180))
+                //{
+                //    Ghostpyou.position += Vector3.up;
+                //}
+
+                return false;
+
+            }
+
+            if (column != null)
+            {
+               
+                
+                
+               if (Borad.Find((y-1).ToString()) !=null)
+                {
+                    var columndown = Borad.Find((y - 1).ToString());
+                    for(int j=0; j<columndown.childCount; j++)
+                    {
+                        if(int.Parse(columndown.GetChild(j).name) == x)
+                        {
+
+                            if (pyou.rotation.eulerAngles == new Vector3(0, 0, 90) || pyou.rotation.eulerAngles == new Vector3(0, 0, 270))
+                            {
+                                if (i == 0)
+                                {
+                                    while (true)
+                                    {
+                                        var nextnode = root.GetChild(1);
+                                        x = Mathf.RoundToInt(nextnode.position.x + halfXsize + 0.5f);
+                                        y = Mathf.RoundToInt(nextnode.position.y + halfYsize - 5);
+                                        column = Borad.Find(y.ToString());
+                                        Vector3 breakPostion = nextnode.position;
+                                        if (Borad.Find((y - 1).ToString()) != null && column != null)
+                                        {
+                                            columndown = Borad.Find((y - 1).ToString());
+                                            bool down = false;
+                                            for (int jj = 0; jj < columndown.childCount; jj++)
+                                            {
+                                                if (int.Parse(columndown.GetChild(jj).name) != x)
+                                                {
+                                                    down = true;
+                                                  
+                                                }
+                                                else
+                                                {
+                                                    down = false;
+                                                    break;
+                                                }
+                                            }
+
+                                            if(down ==true)
+                                            {
+                                                nextnode.position += Vector3.down;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+
+                                        if (nextnode.position == breakPostion)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    while (true)
+                                    {
+                                        var nextnode = root.GetChild(0);
+                                        x = Mathf.RoundToInt(nextnode.position.x + halfXsize + 0.5f);
+                                        y = Mathf.RoundToInt(nextnode.position.y + halfYsize - 5);
+                                        column = Borad.Find(y.ToString());
+                                        Vector3 breakPostion = nextnode.position;
+
+
+
+                                        if (Borad.Find((y - 1).ToString()) != null && column != null)
+                                        {
+                                            columndown = Borad.Find((y - 1).ToString());
+                                            bool down = false;
+
+                                            for (int jj = 0; jj < columndown.childCount; jj++)
+                                            {
+                                                if (int.Parse(columndown.GetChild(jj).name) != x)
+                                                {
+
+                                                   
+                                                    down = true;
+                                                }
+                                                else
+                                                {
+                                                    down = false;
+                                                    break;
+                                                }
+                                            }
+                                            if(down ==true)
+                                            {
+                                                nextnode.position += Vector3.down;
+                                            }
+
+                                        }
+                                        else
+                                        {
+                                            break;
+                                        }
+
+                                        if (nextnode.position == breakPostion)
+                                        {
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+
+                            return false;
+                          
+                        }
+                    }
+
+                }
+               
+            } 
+
+
+        }
+
+        return true;
+    }
 
 
     //바닥이거나 보드 안에 벗어나는지 체크
@@ -830,10 +1106,10 @@ public class MakeBlock : MonoBehaviour
         for (int i = 0; i < root.childCount; ++i)
         {
             var node = root.GetChild(i);
-            int x = Mathf.RoundToInt(node.transform.position.x + halfXsize + 0.5f);
-            int y = Mathf.RoundToInt(node.transform.position.y + halfYsize - 5);
+            int x = Mathf.RoundToInt(node.position.x + halfXsize + 0.5f);
+            int y = Mathf.RoundToInt(node.position.y + halfYsize - 5);
 
-            MaxXR = x;
+           
             //좌우측 못가게
             if (x < 1 || x > Xsize)
             {
@@ -884,6 +1160,22 @@ public class MakeBlock : MonoBehaviour
 
 
     }
+
+    void GhostPyouErase(Transform root)
+    {
+        while(root.childCount>0)
+        {
+            var node = root.GetChild(0);
+            node.gameObject.SetActive(false);
+            node.parent = null;
+
+        }
+
+    }
+
+    
+
+
     //뿌요를 보드에 추가
     void AddToBoard(Transform root)
     {
@@ -900,8 +1192,8 @@ public class MakeBlock : MonoBehaviour
 
             var node = root.GetChild(0);
 
-            int x = Mathf.RoundToInt(node.transform.position.x + halfXsize + 0.5f);
-            int y = Mathf.RoundToInt(node.transform.position.y);
+            int x = Mathf.RoundToInt(node.position.x + halfXsize + 0.5f);
+            int y = Mathf.RoundToInt(node.position.y);
 
 
             node.parent = Borad.Find(y.ToString());
@@ -910,16 +1202,17 @@ public class MakeBlock : MonoBehaviour
 
 
             //Instantiate(node,node.transform).name = node.name;
-            node.transform.name = x.ToString();
+            node.name = x.ToString();
 
             if (count == 1 && downParent > 0)
             {
-                if (isdown[0].name != node.transform.name)
+                if (isdown[0].name != node.name)
                 {
                     isdown[0].parent = Borad.Find((orgParent - downParent).ToString());
-                    isdown[0].transform.position += new Vector3(0, -downParent, 0);
+                    isdown[0].position += new Vector3(0, -downParent, 0);
                 }
             }
+
 
             else if (count == 1 && downParent == 0)
             {
@@ -944,7 +1237,7 @@ public class MakeBlock : MonoBehaviour
                     {
 
                         //만약 찾아보다가 같은게 있다면 밑에 있으니까 내려가면안되고 없으면 내려가야함
-                        if (node.transform.name == XnodeList[o])
+                        if (node.name == XnodeList[o])
                         {
                             down = 0;
                             break;
@@ -967,7 +1260,7 @@ public class MakeBlock : MonoBehaviour
 
                         isdown.Add(node);
 
-                        node.transform.position += new Vector3(0, -1, 0);
+                        node.position += new Vector3(0, -1, 0);
                         node.parent = Borad.Find((y - 1).ToString());
                         //node.transform.position = new Vector3(node.transform.position.x, node.transform.position.y- 1, node.transform.position.z);
                     }
@@ -1004,7 +1297,7 @@ public class MakeBlock : MonoBehaviour
                 {
 
                     //만약 찾아보다가 같은게 있다면 밑에 있으니까 내려가면안되고 없으면 내려가야함
-                    if (node.transform.name == XnodeList[o])
+                    if (node.name == XnodeList[o])
                     {
                         down = 0;
                         break;
@@ -1168,22 +1461,22 @@ public class MakeBlock : MonoBehaviour
            for (int x = 0; x < YyRedKey.Count; x++)  //붙어있는게 4개 이상이면 어떻게 해야하지...?  
            {
                if (YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 3)  //0123  -
-                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 20) && YyRed.ContainsKey(YyRedKey[x] + 30) //0102030 |
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 10) //0126 ㄴ
-                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 12) // 0678 r
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11) // 0167 ㅁ
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 12) // 0128 ㄴ> 
-                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 8) //2678    ㄱ
-                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11)  //ㅜ 자 모양 있어야함
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 11) // ㅗ 자 모양
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) // 계단 모양
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 12) // 반대방향 계단 
+                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 20) //  ㄴ 
+                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 21)  // ㄴ>
+                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11)  //ㅜ 자 모양 있어야함
+                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 19) // 계단
+                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 20) && YyRed.ContainsKey(YyRedKey[x] + 30) //0102030 |
+                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 12) // 0678 r
+                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 8) //2678    ㄱ
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 20) //  ㅏ 
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 20) //  ㅓ 
-                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 20) //  ㄴ 
-                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 19) // 계단
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 21) //반대계단 
-                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 21)  // ㄴ>
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 19) && YyRed.ContainsKey(YyRedKey[x] + 20) // ㄱ 
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 20) && YyRed.ContainsKey(YyRedKey[x] + 21)) // ㄱ> YyRedKey[x] 10 20 21
                {
@@ -1967,31 +2260,18 @@ public class MakeBlock : MonoBehaviour
                             {
                                 break;
                             }
-
-
                         }
                     }
-
-
                 }
-
-
                 YyGreen.Clear();
             }
-
-
-        }
-        
+        }       
         if (YyYellowKey.Count >= 4)
         {
-
             //int x = 0;
             int cleck = 0;
-
             List<int> CleckList = new List<int>();
-
             bool Erase = false;
-
             for (int x = 0; x < YyYellowKey.Count; x++)  //붙어있는게 4개 이상이면 어떻게 해야하지...?  
             {
                 if (YyYellow.ContainsKey(YyYellowKey[x]) && YyYellow.ContainsKey(YyYellowKey[x] + 1) && YyYellow.ContainsKey(YyYellowKey[x] + 2) && YyYellow.ContainsKey(YyYellowKey[x] + 3)  //0123  -
@@ -2015,9 +2295,7 @@ public class MakeBlock : MonoBehaviour
                       || YyYellow.ContainsKey(YyYellowKey[x]) && YyYellow.ContainsKey(YyYellowKey[x] + 10) && YyYellow.ContainsKey(YyYellowKey[x] + 20) && YyYellow.ContainsKey(YyYellowKey[x] + 21)) //ㄱ>
                 {
                     cleck = YyYellowKey[x];
-                    Erase = true;
-                   
-
+                    Erase = true;                   
                     if (Erase)
                     {
                         //13
@@ -2237,298 +2515,181 @@ public class MakeBlock : MonoBehaviour
                             }
                             else
                             {
-
                                 continue;
                             }
                             if (pp == cleck1)
                             {
                                 break;
                             }
-
-
                         }
                     }
-
-
                 }
-
-
                 YyYellow.Clear();
             }
-
-
         }
-
         #endregion
-        
-
         if (isBroken == false)
-        {
-            
-                Combo = -1;
-            
+        {            
+                Combo = -1;           
         }
-
     }
-
     //삭제했으면 내려주자
     void BrekenDown()
     {
         int enptyCol = 0;
-
-
         List<int> UpList = new List<int>();
         List<int> DownList = new List<int>();
         if (isBroken)
         {
             Combo += 1;
-
             for (int i = 1; i < Borad.childCount; i++)
             {
                 Transform xsize = Borad.GetChild(i);//i번쨰줄 체크 위쪽줄
-
                 UpList.Clear();
                 DownList.Clear();
                 YyUp.Clear();
                 YyDown.Clear();
-
-
                 int down = i - 1;
                 Transform ysize = Borad.GetChild(down); //아래쪽 줄
-
-
                 if (xsize.childCount != 0)
                 {
                     for (int j = 0; j <= xsize.childCount - 1; j++)
                     {
-
                         YyUp.Add(int.Parse(xsize.GetChild(j).name) + i * 10 - 1, xsize.GetChild(j).name);
                         UpList.Add(int.Parse(xsize.GetChild(j).name) + i * 10 - 1);
                     }
-
                     for (int j = 0; j <= ysize.childCount - 1; j++)
                     {
-
                         YyDown.Add(int.Parse(ysize.GetChild(j).name) + down * 10 - 1, ysize.GetChild(j).name);
-
                     }
-
                 }
-
                 while (down >= 0 && YyUp.Count != 0)
                 {
-
                     if (YyDown.Count == 0 && down == i - 1)
                     {
-
                         enptyCol += 1;
-
                     }
                     else if (YyDown.Count != 0 && down == i - 1)
                     {
                         for (int j = 0; j < UpList.Count; j++)
                         {
-
                             if (YyDown.ContainsKey(UpList[j] - 10))//아래에 있다
                             {
                                 UpList.Remove(UpList[j]);
                                 j = -1;//처음부터
                             }
-
-
                         }
-
                         if (UpList.Count != 0)
                         {
                             enptyCol += 1;
                         }
-
-
                     }
                     else if (down < i - 1 && UpList.Count != 0)
                     {
                         xsize = Borad.GetChild(down + 1);//i번쨰줄 체크 위쪽줄
-
                         ysize = Borad.GetChild(down); //아래쪽 줄
                         UpList.Clear();
                         for (int j = 0; j <= xsize.childCount - 1; j++)
                         {
-
                             YyUp.Add(int.Parse(xsize.GetChild(j).name) + (down + 1) * 10 - 1, xsize.GetChild(j).name);
                             UpList.Add(int.Parse(xsize.GetChild(j).name) + (down + 1) * 10 - 1);
                         }
-
-
                         for (int j = 0; j <= ysize.childCount - 1; j++)
                         {
-
                             YyDown.Add(int.Parse(ysize.GetChild(j).name) + down * 10 - 1, ysize.GetChild(j).name);
-
                         }
-
-
                         if (YyDown.Count == 0)
                         {
                             enptyCol += 1;
                             break;
-
-
-
                         }
                         else
                         {
                             for (int j = 0; j < UpList.Count; j++)
                             {
-
                                 if (YyDown.ContainsKey(UpList[j] - 10))//아래에 있다
                                 {
                                     UpList.Remove(UpList[j]);
                                     j = -1;//처음부터
                                 }
-
-
                             }
-
                             if (UpList.Count != 0)
                             {
                                 enptyCol += 1;
                             }
-
-
                         }
-
-
                     }
-
-
-
                     if (enptyCol > 0)
                     {
                         int Updown = 0;
-
-
                         for (int c = 0; c < UpList.Count; c++)
                         {
-
-                            int y = down + 1;
-                          
-
+                            int y = down + 1;                         
                             Transform xxsize = Borad.GetChild(y);
-
-
                             if (Updown == UpList.Count)
                             {
                                 break;
                             }
                             for (int x = 0; x < xxsize.childCount; x++)
                             {
-
                                 if (YyUp[UpList[c]] == xxsize.GetChild(x).name)
                                 {
-
                                     xxsize.GetChild(x).gameObject.transform.position += new Vector3(0, -1, 0);
-
-
                                     xxsize.GetChild(x).parent = Borad.Find((y - 1).ToString());
-
                                     Updown++;
-
                                 }
-
                             }
                             xxsize = null;
                         }
-
-
                         enptyCol = 0;
                     }
                     down--;
-
-
-
-
-
-
                 }
-
-
-
-
             }
-
-
-
-
-
-
-
-
         }
-
-
         else
         {
             for (int i = 1; i < Borad.childCount; i++)
             {
                 Transform xsize = Borad.GetChild(i);//i번쨰줄 체크 위쪽줄
-
                 UpList.Clear();
                 DownList.Clear();
                 YyUp.Clear();
                 YyDown.Clear();
-
-
                 int down = i - 1;
                 Transform ysize = Borad.GetChild(down); //아래쪽 줄
-
-
                 if (xsize.childCount != 0)
                 {
                     for (int j = 0; j <= xsize.childCount - 1; j++)
                     {
-
                         YyUp.Add(int.Parse(xsize.GetChild(j).name) + i * 10 - 1, xsize.GetChild(j).name);
                         UpList.Add(int.Parse(xsize.GetChild(j).name) + i * 10 - 1);
                     }
-
                     for (int j = 0; j <= ysize.childCount - 1; j++)
                     {
-
                         YyDown.Add(int.Parse(ysize.GetChild(j).name) + down * 10 - 1, ysize.GetChild(j).name);
-
                     }
-
                 }
-
                 while (down >= 0 && YyUp.Count != 0)
                 {
-
                     if (YyDown.Count == 0 && down == i - 1)
                     {
-
                         enptyCol += 1;
-
                     }
                     else if (YyDown.Count != 0 && down == i - 1)
                     {
                         for (int j = 0; j < UpList.Count; j++)
                         {
-
                             if (YyDown.ContainsKey(UpList[j] - 10))//아래에 있다
                             {
                                 UpList.Remove(UpList[j]);
                                 j = -1;//처음부터
-                            }
-
-
+                            }                       
                         }
-
                         if (UpList.Count != 0)
                         {
                             enptyCol += 1;
                         }
-
-
                     }
                     else if (down < i - 1 && UpList.Count != 0)
                     {
@@ -2542,113 +2703,59 @@ public class MakeBlock : MonoBehaviour
                             YyUp.Add(int.Parse(xsize.GetChild(j).name) + (down + 1) * 10 - 1, xsize.GetChild(j).name);
                             UpList.Add(int.Parse(xsize.GetChild(j).name) + (down + 1) * 10 - 1);
                         }
-
-
                         for (int j = 0; j <= ysize.childCount - 1; j++)
                         {
-
                             YyDown.Add(int.Parse(ysize.GetChild(j).name) + down * 10 - 1, ysize.GetChild(j).name);
-
-                        }
-
-
+                        }                 
                         if (YyDown.Count == 0)
                         {
                             enptyCol += 1;
                             break;
-
-
-
                         }
                         else
                         {
                             for (int j = 0; j < UpList.Count; j++)
                             {
-
                                 if (YyDown.ContainsKey(UpList[j] - 10))//아래에 있다
                                 {
                                     UpList.Remove(UpList[j]);
                                     j = -1;//처음부터
                                 }
-
-
                             }
-
                             if (UpList.Count != 0)
                             {
                                 enptyCol += 1;
                             }
-
-
                         }
-
-
                     }
-
-
-
                     if (enptyCol > 0)
                     {
                         int Updown = 0;
-
-
                         for (int c = 0; c < UpList.Count; c++)
-                        {
-
-                            int y = down + 1;
-                           
+                        {                     
+                            int y = down + 1; 
                             Transform xxsize = Borad.GetChild(y);
-
-
                             if (Updown == UpList.Count)
                             {
                                 break;
                             }
                             for (int x = 0; x < xxsize.childCount; x++)
                             {
-
                                 if (YyUp[UpList[c]] == xxsize.GetChild(x).name)
                                 {
-
                                     xxsize.GetChild(x).gameObject.transform.position += new Vector3(0, -1, 0);
-
-
                                     xxsize.GetChild(x).parent = Borad.Find((y - 1).ToString());
-
                                     Updown++;
-
                                 }
-
                             }
                             xxsize = null;
                         }
-
-
                         enptyCol = 0;
                     }
                     down--;
-
-
-
-
-
-
                 }
-
-
-
-
             }
-
-
-
-
-
-
         }
-
-
-
         ComboTime = 0f;
     }
     

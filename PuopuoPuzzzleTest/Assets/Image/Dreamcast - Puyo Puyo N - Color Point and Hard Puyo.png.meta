@@ -763,27 +763,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 418
-        width: 31
-        height: 29
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e6160e4502c8a7469a4decbc5fba496
-      internalID: -3742371462414020176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
