@@ -7,16 +7,16 @@ TextureImporter:
     second: Red
   - first:
       213: 5724176144027121408
-    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_1
+    second: GreenTopLink
   - first:
       213: -5004630437161122433
-    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_2
+    second: GreenRightLink
   - first:
       213: -3742371462414020176
-    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_3
+    second: GreenTopRightLink
   - first:
       213: -1922809554194946952
-    second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_4
+    second: GreenTopDownRightLink
   - first:
       213: -7925632039108245608
     second: Dreamcast - Puyo Puyo N - Color Point and Hard Puyo_5
@@ -437,6 +437,39 @@ TextureImporter:
   - first:
       213: 7932707597631549162
     second: YellowEffect
+  - first:
+      213: 4959600254838672768
+    second: GreenLeftLink
+  - first:
+      213: -8099505662399580233
+    second: GreenLeftTopLink
+  - first:
+      213: 7927452072545697911
+    second: GreenLeftRightLink
+  - first:
+      213: 1180407464749817706
+    second: GreenAllLink
+  - first:
+      213: -2866513839685611410
+    second: GreenTopBotomLink
+  - first:
+      213: 671407397519766997
+    second: GreenBottomLink
+  - first:
+      213: -7844967799943520364
+    second: GreenLeftTopBottomLink
+  - first:
+      213: -5225439507319908699
+    second: GreenLeftTopRightLink
+  - first:
+      213: 2484861054605387129
+    second: GreenLeftBottomLink
+  - first:
+      213: 2644423298633534068
+    second: GreenLeftDownTopLink
+  - first:
+      213: 5935384216974390994
+    second: GreenRightBottomLink
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -759,6 +792,321 @@ TextureImporter:
       bones: []
       spriteID: 43c68a78cb3fd1c4a8d670a618a469bc
       internalID: 7932707597631549162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTopLink
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 449
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33d4df93f9f80c4c83e4ee6dc382da1
+      internalID: 5724176144027121408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenRightLink
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d688e91dd3cc83488e7679a6f972348
+      internalID: -5004630437161122433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTopRightLink
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 451
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922ccf83b5a940c49acd72c82c44c596
+      internalID: -3742371462414020176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTopDownRightLink
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5126350267bacc347be3972e5de6f6be
+      internalID: -1922809554194946952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenLeftLink
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cbd1a8818946f48a90cd6e8e3fa162
+      internalID: 4959600254838672768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenLeftTopLink
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 451
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc820df90b0171044835c9b3d084a97b
+      internalID: -8099505662399580233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenLeftRightLink
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf113c7a527bb604fae39efe1fdb5029
+      internalID: 7927452072545697911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenAllLink
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541e078df1c81df48b0998b7b192690a
+      internalID: 1180407464749817706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenTopBotomLink
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80979a0a4c907af48b079432b950ae21
+      internalID: -2866513839685611410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenBottomLink
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a835f8e6b559bbd4082e82691bcef5e4
+      internalID: 671407397519766997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenLeftTopBottomLink
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1710feb30b230144a9b265775b03d18
+      internalID: -7844967799943520364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenLeftTopRightLink
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 449
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d11830f74c30cc478a4fa7e9093d1c9
+      internalID: -5225439507319908699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenLeftBottomLink
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e083e5167c403fc45a9fb034463de857
+      internalID: 2484861054605387129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenLeftDownTopLink
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528ca44b402741540882088ea0304b23
+      internalID: 2644423298633534068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenRightBottomLink
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 448
+        width: 31
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0f4ba34d43ec34baed6d54c8ec6b77
+      internalID: 5935384216974390994
       vertices: []
       indices: 
       edges: []

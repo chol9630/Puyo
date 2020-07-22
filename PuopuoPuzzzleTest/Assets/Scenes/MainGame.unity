@@ -299,13 +299,23 @@ MonoBehaviour:
   Ghostpyou: {fileID: 764666792}
   Xsize: 6
   Ysize: 10
-  PrefabTile: {fileID: 4727722373427086476, guid: a7e31f209b50f144da56f46953ccfb67,
-    type: 3}
   GameOver: 0
   GameOverTimeText: {fileID: 0}
   GameOverText: {fileID: 0}
   GameOverPanel: {fileID: 788669211}
   GameOverTime: 10
+  YyRed:
+    m_keys: 
+    m_values: []
+  YyBlue:
+    m_keys: 
+    m_values: []
+  YyGreen:
+    m_keys: 
+    m_values: []
+  YyYellow:
+    m_keys: 
+    m_values: []
 --- !u!4 &110407212
 Transform:
   m_ObjectHideFlags: 0
@@ -1731,8 +1741,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008506699}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.0743, z: 0}
+  m_LocalScale: {x: 1, y: 0.924139, z: 1}
   m_Children: []
   m_Father: {fileID: 2004759971}
   m_RootOrder: 0

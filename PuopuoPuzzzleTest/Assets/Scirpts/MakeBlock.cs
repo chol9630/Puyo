@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class StringInt : SerializableDictionary<int, string> { };
@@ -52,8 +52,7 @@ public class MakeBlock : MonoBehaviour
 
     public int Xsize;
     public int Ysize;
-
-    public GameObject PrefabTile;
+    
 
     public bool GameOver = false;
     public Text GameOverTimeText;
@@ -80,20 +79,19 @@ public class MakeBlock : MonoBehaviour
    
     private bool isRotate;
     private Vector3 moveDir;
-  
-
     
 
-    private StringInt YyRed = new StringInt();
-    private StringInt YyBlue = new StringInt();
-    private StringInt YyGreen = new StringInt();
-    private StringInt YyYellow = new StringInt();
+    public StringInt YyRed = new StringInt();
+    public StringInt YyBlue = new StringInt();
+    public StringInt YyGreen = new StringInt();
+    public StringInt YyYellow = new StringInt();
 
 
     private StringInt YyUp = new StringInt(); //삭제할떄 위 블럭
     private StringInt YyDown = new StringInt(); //삭제할떄 아래 블럭
 
     private bool isBroken = false; // 부셔진게있으면 true
+    
 
     //string 리스트 정렬해주기위함
     public int compare(string x, string y)
@@ -155,6 +153,7 @@ public class MakeBlock : MonoBehaviour
     void Start()
     {
 
+       
 
         AudioSource = GetComponent<AudioSource>();
 
@@ -186,6 +185,11 @@ public class MakeBlock : MonoBehaviour
             GameObject col = new GameObject(i.ToString());
             col.transform.position = new Vector3(0, i, 0);
             col.transform.parent = Borad;
+
+           
+           
+           
+           
         }
         MapSelection();
     }
@@ -365,7 +369,7 @@ public class MakeBlock : MonoBehaviour
         }
     }
     
-
+    
     //버튼회전
     public void MoveRotation()
     {
@@ -481,14 +485,16 @@ public class MakeBlock : MonoBehaviour
         if (IsStart == false)
         {
             rand = Random.Range(1, 17);
-            //rand = 1;
+           
         }
         else
         {
             rand = NextPyou;
         }
         NextPyou = Random.Range(1, 17);
-        //NextPyou = 1;
+       
+
+        
 
 
         switch (rand)
@@ -557,6 +563,7 @@ public class MakeBlock : MonoBehaviour
                 IsStart = true;              
                 break;
             case 10: // 그린 블루
+                
                 ObjectPool.Instance.SpawnPool("Green", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("Blue", new Vector3(0.5f, 9f, 0f), Quaternion.identity).transform.parent = pyou;
                 ObjectPool.Instance.SpawnPool("GhostGreen", new Vector3(0.5f, 10f, 0f), Quaternion.identity).transform.parent = Ghostpyou;
@@ -608,7 +615,8 @@ public class MakeBlock : MonoBehaviour
 
         }
 
-
+        //puyolinkone = pyou.GetChild(0).GetComponent<Puyolink>();
+        //puyolinkTwo = pyou.GetChild(1).GetComponent<Puyolink>();
 
     }
     // Update is called once per frame
@@ -661,9 +669,10 @@ public class MakeBlock : MonoBehaviour
             {
                
                 ReStart();
+                GameOverTime = 10f;
 
-                
-               
+
+
             }
 
             else if(Input.GetKey(KeyCode.Escape))
@@ -818,13 +827,18 @@ public class MakeBlock : MonoBehaviour
 
 
             pyou.rotation *= Quaternion.Euler(0, 0, 90);
-            pyou.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
-            pyou.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
-            
+            if (pyou.childCount != 0)
+            {
+                pyou.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
+                pyou.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
+            }
             
             Ghostpyou.rotation *= Quaternion.Euler(0, 0, 90);
-            Ghostpyou.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
-            Ghostpyou.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
+            if (Ghostpyou.childCount != 0)
+            {
+                Ghostpyou.GetChild(0).rotation *= Quaternion.Euler(0, 0, -90);
+                Ghostpyou.GetChild(1).rotation *= Quaternion.Euler(0, 0, -90);
+            }
             Ghostpyou.position = pyou.position;
             
 
@@ -847,7 +861,8 @@ public class MakeBlock : MonoBehaviour
            if(Ghostpyou.position.y <-1) //무한루프 방지
            {
                break;
-           }           
+           }
+                      
 
 
             
@@ -1197,12 +1212,22 @@ public class MakeBlock : MonoBehaviour
 
 
             node.parent = Borad.Find(y.ToString());
+            
+
+
             //node.parent.name = node.name;
 
+            if(node.parent ==null)
+            {
+                GameOver = true;
+
+            }
 
 
-            //Instantiate(node,node.transform).name = node.name;
+           
             node.name = x.ToString();
+           
+
 
             if (count == 1 && downParent > 0)
             {
@@ -1373,8 +1398,7 @@ public class MakeBlock : MonoBehaviour
 
 
     }
-
-
+    
     void Breken()
     {
         isBroken = false;
@@ -1454,21 +1478,29 @@ public class MakeBlock : MonoBehaviour
            //int x = 0;
            int cleck = 0;
 
+           
+
            List<int> CleckList = new List<int>();
 
            bool Erase = false;
-
+           
+           //0 1 2  3
+           //0 1 2  10
+           //0 1 10 11
+           //0 1 2  12
+           //
+           //
            for (int x = 0; x < YyRedKey.Count; x++)  //붙어있는게 4개 이상이면 어떻게 해야하지...?  
            {
                if (YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 3)  //0123  -
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 10) //0126 ㄴ
-                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11) // 0167 ㅁ
-                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 12) // 0128 ㄴ> 
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 11) // ㅗ 자 모양
+                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 2) && YyRed.ContainsKey(YyRedKey[x] + 12) // 0128 ㄴ> 
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) // 계단 모양
-                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 12) // 반대방향 계단 
+                   || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11) // 0167 ㅁ
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 20) //  ㄴ 
                     || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 21)  // ㄴ>
+                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 1) && YyRed.ContainsKey(YyRedKey[x] + 11) && YyRed.ContainsKey(YyRedKey[x] + 12) // 반대방향 계단 
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 11)  //ㅜ 자 모양 있어야함
                      || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 9) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 19) // 계단
                    || YyRed.ContainsKey(YyRedKey[x]) && YyRed.ContainsKey(YyRedKey[x] + 10) && YyRed.ContainsKey(YyRedKey[x] + 20) && YyRed.ContainsKey(YyRedKey[x] + 30) //0102030 |
@@ -1676,6 +1708,9 @@ public class MakeBlock : MonoBehaviour
 
                             if (YyRed[CleckList[c]] == xxsize.GetChild(x).name)
                             {
+                                //Puyolink.Boom = true;
+
+                                
                                 xxsize.GetChild(x).gameObject.SetActive(false);
 
                             }
@@ -2156,7 +2191,7 @@ public class MakeBlock : MonoBehaviour
                        if (YyGreen.ContainsKey(cleck) && YyGreen.ContainsKey(cleck + 1) && YyGreen.ContainsKey(cleck + 11) && YyGreen.ContainsKey(cleck + 21))  // ㄴ>
                         {
                             CleckList.Add(cleck);
-                            CleckList.Add(cleck + 10);
+                            CleckList.Add(cleck + 1);
                             CleckList.Add(cleck + 11);
                             CleckList.Add(cleck + 21);
                         }
@@ -2759,4 +2794,6 @@ public class MakeBlock : MonoBehaviour
         ComboTime = 0f;
     }
     
+  
+
 }

@@ -25,30 +25,34 @@ public class ObjectPool : MonoBehaviour
         }
     }
 
+   
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
+        
+          
         
         DictionaryPool = new Dictionary<string, Queue<GameObject>>();
 
-        foreach (Pool pool in listPool )
+        foreach (Pool pool in listPool)
         {
             Queue<GameObject> objectPool = new Queue<GameObject>();
 
-            for(int i=0; i<pool.size; i++)
+            for (int i = 0; i < pool.size; i++)
             {
                 GameObject go = Instantiate(pool.PreFab);
                 go.SetActive(false);
                 objectPool.Enqueue(go);
 
             }
-            DictionaryPool.Add(pool.tag ,objectPool);
+            DictionaryPool.Add(pool.tag, objectPool);
 
         }
 
-
     }
+
+    
     
    public GameObject SpawnPool(string tag , Vector3 Postion , Quaternion rotation)
     {
@@ -59,6 +63,8 @@ public class ObjectPool : MonoBehaviour
         }
 
         GameObject objectFromPool = DictionaryPool[tag].Dequeue();
+
+        
 
         if(objectFromPool.activeInHierarchy ==true)
         {
